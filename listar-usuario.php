@@ -21,9 +21,16 @@ if($qtd > 0){
         print "<td>".$row->email."</td>";
         print "<td>".$row->data_nasc."</td>";
         print "<td>
-        <button class='btn btn-success' onclick=\"location.href='?page=editar&id=".$row->id."'\">Editar</button>
-        <button class='btn btn-danger' onclick=\"if(confirm('Tem certeza que deseja excluir este usuario?')){location.href='?page=salvar&acao=excluir&id=".$row->id."'}else{false}\">Excluir</button>
-        </td>";
+    <div class='d-grid gap-1'>
+        <button class='btn btn-success' style='width: 90px;' onclick=\"location.href='?page=editar&id=".$row->id."'\">
+            <i class='bi bi-pencil me-1'></i> Editar
+        </button>
+
+        <button class='btn btn-danger' style='width: 90px;' onclick=\"if(confirm('Tem certeza que deseja excluir este usuario?')){location.href='?page=salvar&acao=excluir&id=".$row->id."'}else{false}\">
+            <i class='bi bi-trash me-1'></i> Excluir
+        </button>
+    </div>
+</td>";
         print "</tr>";
         
     }
